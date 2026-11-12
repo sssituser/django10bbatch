@@ -1,0 +1,12 @@
+1.Create the Project, open the Project , create Application
+2.Create Templates in the Base_DIR(MainFolder)
+3.In side the templates folder add myapp folder
+4.In side myapp folder Add html pages with design
+5.In views.py create all functions for html
+6.Add urls.py to the application folder and define the paths
+7.In project urls.py include application urls
+8.In settings.py 17 - TEMPLATES_DIR = BASE_DIR/'templates'
+                 40 - In INSTALLED_APP = [
+                    40 'myapp',
+                 ]
+                 58. 'DIR'=[TEMPLATES_DIR]

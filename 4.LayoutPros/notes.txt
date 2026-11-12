@@ -1,0 +1,22 @@
+Layout Page or Master Page :
+================================
+
+In order to apply common content to the Django Templates we use
+layout page or Mastaer page.
+
+//=====base.html================
+A layout or Master page is a html file , In this html file we keep common content
+and we add ginja2 to sytax to apply the common content for all the page
+{%block body_block%}
+
+{%endblock%}
+
+//=========In All the templates=============
+
+We need Import layout or master page in all the tmeplates by using
+{%extends 'maypp/base.html'%}
+{%block body_block%}
+
+{%endblock%}
+
+
