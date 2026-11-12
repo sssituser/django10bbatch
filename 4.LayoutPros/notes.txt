@@ -6,7 +6,7 @@ layout page or Mastaer page.
 
 //=====base.html================
 A layout or Master page is a html file , In this html file we keep common content
-and we add ginja2 to sytax to apply the common content for all the page
+and we add ginja2 to sytax to apply the common content for all the pages
 {%block body_block%}
 
 {%endblock%}
