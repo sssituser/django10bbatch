@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Home</title>  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+/>
+</head>
+<body>
+            <h1 style="text-align: center;color: blue;">Home Page</h1>
+            <div class="container">
+                {%if employees%}  
+                <table class="table table-bordered table-striped table-hove text-center">
+                    <thead>
+                        <tr>
+                            <th class="bg-primary text-white">Employee ID</th>
+                            <th class="bg-primary text-white">Employee Name</th>
+                            <th class="bg-primary text-white">Employee Salary</th>
+                            <th class="bg-primary text-white">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      {%for emp in employees%}
+                        <tr>
+                            <td>{{emp.eid}}</td>
+                            <td>{{emp.ename}}</td>
+                            <td>{{emp.esal}}</td>
+                            <td>
+                                <i class="fa fa-eye fa-2x text-primary me-3"></i>
+                                
+                                
+                                 <i class="fa fa-pen fa-2x text-warning me-3"></i>
+                                
+                                
+                                
+                             <i class="fa fa-trash-alt fa-2x text-danger"></i>
+                            </td>
+                        </tr>
+                      {%endfor%}
+                    </tbody>
+                </table>
+
+                {%else%}
+                     <p class="h1 text-center">Records not found</p>
+                {%endif%}
+            </div>
+</body>
+</html>
