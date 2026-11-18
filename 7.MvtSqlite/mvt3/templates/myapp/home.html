@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Home</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <p class="h2 text-center text-primary mt-3">Student Information</p>
+        {%if studs%}
+          <table class="table table-bordered text-center table-hover">
+            <thead>
+                <tr>
+                    <th class="bg-success text-white">Student ID</th>
+                    <th class="bg-success text-white">Student Name</th>
+                    <th class="bg-success text-white">Student Marks</th>
+                    <th class="bg-success text-white">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%for stu in studs%}
+                    <tr>
+                        <td>{{stu.StudentId}}</td>
+                         <td>{{stu.StudentName}}</td>
+                          <td>{{stu.StudentMarks}}</td>
+                          <td>
+                            <a href="#">Details</a>
+                             <a href="#">Edit</a>
+                              <a href="#">Delete</a>
+                          </td>
+                    </tr>
+                {%endfor%}
+            </tbody>
+          </table>
+        {%else%}
+            <p class="h1 text-center text-danger">Records Not found</p>
+        {%endif%}
+    </div>
+</body>
+</html>
