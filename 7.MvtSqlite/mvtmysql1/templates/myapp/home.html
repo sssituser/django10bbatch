@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>
+    <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"   rel="stylesheet"/>
+  <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.2.0/css/mdb.min.css"   rel="stylesheet"/>
+
+</head>
+<body>
+    <div class="container mt-5">
+            <p class="h2 text-center text-primary">Customer Informtion</p>
+            {%if cust_list%}
+                    <table class="table table-bordered table-striped text-center animated bounceIn">
+                            <thead>
+                                <tr>
+                                    <th class="bg-primary text-white">Customer ID</th>
+                                    <th  class="bg-primary text-white">Customer Name</th>
+                                    <th  class="bg-primary text-white">Customer Contact</th>
+                                    <th  class="bg-primary text-white">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {%for cust in cust_list%}
+                                    <tr>
+                                        <td>{{cust.CustomerId}}</td>
+                                        <td>{{cust.CustomerName}}</td>
+                                         <td>{{cust.CustomerContact}}</td>
+                                         <td>Details | Edit | Delete</td>
+                                    </tr>
+                                {%endfor%}
+                            </tbody>
+                    </table>
+            {%else%}
+
+                    <p class="h1 text-center text-danger">Records not found</p>
+
+            {%endif%}
+    </div>
+</body>
+</html>
