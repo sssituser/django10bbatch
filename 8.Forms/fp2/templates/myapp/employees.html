@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Employees Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align:center">Employees Informtion</h1>
+    <a href="/register">Create</a>
+    <div style="text-align: center;">
+           {%if emplist%}
+
+           <table class="table table-bordered table-hover table-striped table-primary text-center">
+                <thead>
+                    <tr>
+                        <th class="bg-primary text-white">EmployeeID</th>
+                        <th class="bg-primary text-white">EmployeeName</th>
+                        <th class="bg-primary text-white">Employee Salary</th>
+                        <th class="bg-primary text-white">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for emp in emplist%}
+                        <tr>
+                            <td>{{emp.EmployeeId}}</td>
+                            <td>{{emp.EmploeeName}}</td>
+                            <td>{{emp.EmployeeSalary}}</td>
+                            <td>
+                                <a href="#">Details</a> |
+                                <a href="#">Edit</a> |
+                                <a href="#">Delete</a>
+                            </td>
+                        </tr>
+                    {%endfor%}
+                </tbody>
+
+           </table>
+
+           {%else%}
+
+            <p class="h1 text-center text-danger">Records not found</p>
+           {%endif%}
+    </div>
+    </div>
+</body>
+</html>

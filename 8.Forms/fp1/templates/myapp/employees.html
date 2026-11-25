@@ -1,0 +1,29 @@
+{%extends 'myapp/base.html'%}
+{%block body_block%}
+<div class="container">
+    <p class="h1 text-center text-success">Employees</p>
+    {% if emps%}
+        <table class="table table-bordered text-center">
+            <thead>
+                <tr>
+                    <th class="bg-primary text-white">Employee ID</th>
+                    <th class="bg-primary text-white">Employee Name</th>
+                    <th class="bg-primary text-white">Employee Salary</th>
+                    <th class="bg-primary text-white">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%for emp in emps%}
+                    <tr>
+                        <td>{{emp.EmployeeId}}</td>
+                        <td>{{emp.EmployeeName}}</td>
+                        <td>{{emp.EmployeeSalary}}</td>
+                    </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+    {%else%}
+
+    {%endif%}
+</div>
+{%endblock%}
