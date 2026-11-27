@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Detail Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <p class="h1 text-center text-primary">Delete Page</p>
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-header bg-danger text-white text-center">
+                        <p class="h2">Do you want to delete ?</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <h3>Product Id : {{prod.ProductId}}</h3>
+                            </li>
+                             <li class="list-group-item">
+                                <h3>Product Name : {{prod.ProductName}}</h3>
+                            </li>
+                             <li class="list-group-item">
+                                <h3>Product Price : {{prod.ProductPrice}}</h3>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-sm btn-danger">Yes</button>
+                        <a href="/" class="btn btn-warning btn-sm float-end">Cancel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
