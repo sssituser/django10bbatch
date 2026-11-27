@@ -30,6 +30,9 @@ def edit(request,id):
 
 def delete(request,id):
     prod = get_object_or_404(Product,ProductId=id)
+    if request.method == "POST":
+        Product.delete(prod)
+        return redirect("/")
     return render(request,'myapp/delete.html',{'prod':prod})
 
 
